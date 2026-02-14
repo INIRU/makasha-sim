@@ -45,6 +45,12 @@ npm run preview
 GitHub 저장소에서 아래를 확인하세요.
 - `Settings` -> `Pages`
 - `Source`: **GitHub Actions**
+- 처음 한 번은 Pages를 수동으로 활성화해야 합니다.
+  - 비활성 상태에서 CI가 사이트 생성까지 시도하면 `Resource not accessible by integration` 에러가 날 수 있습니다.
+
+### 1-1) 권한 체크(중요)
+- `Settings` -> `Actions` -> `General` -> `Workflow permissions`
+- **Read and write permissions**로 설정
 
 ### 2) 자동 배포 트리거
 - `main` 또는 `master` 브랜치에 push 시 자동 배포
@@ -103,6 +109,11 @@ GitHub 저장소에서 아래를 확인하세요.
 - `Settings -> Pages -> Source`가 `GitHub Actions`인지 확인
 - Actions 탭에서 `Deploy to GitHub Pages` 성공 여부 확인
 - 브라우저 강력 새로고침(`Cmd+Shift+R` / `Ctrl+F5`)
+
+### `Resource not accessible by integration` 에러가 나와요
+- Pages가 아직 비활성 상태면 먼저 `Settings -> Pages`에서 `GitHub Actions`로 저장
+- `Settings -> Actions -> General`에서 `Read and write permissions` 허용
+- 이후 Actions에서 `Deploy to GitHub Pages`를 다시 실행
 
 ### 연타 시 버벅여요
 - 설정 패널에서 클릭 이펙트를 `끔(저사양)`으로 변경
