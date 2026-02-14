@@ -1,19 +1,27 @@
+const RESOURCE_BASE = `${import.meta.env.BASE_URL}resources/`;
+
+function resourcePath(fileName) {
+  return `${RESOURCE_BASE}${fileName}`;
+}
+
+export const DANCING_IMAGE = resourcePath("dancing.gif");
+
 export const CLICK_SOUNDS = [
-  "/resources/이히힛1.mp3",
-  "/resources/이히힛2.mp3",
-  "/resources/이히힛3.mp3",
-  "/resources/이히힛4.mp3",
+  resourcePath("이히힛1.mp3"),
+  resourcePath("이히힛2.mp3"),
+  resourcePath("이히힛3.mp3"),
+  resourcePath("이히힛4.mp3"),
 ];
 
 export const FALL_IMAGES = [
-  "/resources/scared.gif",
-  "/resources/smile.gif",
-  "/resources/sex.gif",
+  resourcePath("scared.gif"),
+  resourcePath("smile.gif"),
+  resourcePath("sex.gif"),
 ];
 
-export const UPGRADE_1_SOUND = "/resources/아 여기서 더 강해지다니.mp3";
-export const UPGRADE_2_SOUND = "/resources/새로운 이야기를 쓸때가 왔어.mp3";
-export const BURST_SOUND = "/resources/나쁘지 않아 괜찮은 기분이야.mp3";
+export const UPGRADE_1_SOUND = resourcePath("아 여기서 더 강해지다니.mp3");
+export const UPGRADE_2_SOUND = resourcePath("새로운 이야기를 쓸때가 왔어.mp3");
+export const BURST_SOUND = resourcePath("나쁘지 않아 괜찮은 기분이야.mp3");
 
 export const ESTATE_BLUEPRINTS = [
   {
@@ -23,7 +31,7 @@ export const ESTATE_BLUEPRINTS = [
     basePrice: 200000,
     growth: 1000,
     reqLevel: 30,
-    audio: "/resources/에르핀 우는 소리.mp3",
+    audio: resourcePath("에르핀 우는 소리.mp3"),
     isSpecial: false,
   },
   {
@@ -33,7 +41,7 @@ export const ESTATE_BLUEPRINTS = [
     basePrice: 500000,
     growth: 4000,
     reqLevel: 60,
-    audio: "/resources/말도 안되는 결과가.mp3",
+    audio: resourcePath("말도 안되는 결과가.mp3"),
     isSpecial: false,
   },
   {
@@ -43,7 +51,7 @@ export const ESTATE_BLUEPRINTS = [
     basePrice: 1500000,
     growth: 10000,
     reqLevel: 90,
-    audio: "/resources/예산이 부족했어.mp3",
+    audio: resourcePath("예산이 부족했어.mp3"),
     isSpecial: false,
   },
   {
@@ -53,7 +61,7 @@ export const ESTATE_BLUEPRINTS = [
     basePrice: 927000000,
     growth: 5521,
     reqLevel: 150,
-    audio: "/resources/나쁘지 않아 괜찮은 기분이야.mp3",
+    audio: resourcePath("나쁘지 않아 괜찮은 기분이야.mp3"),
     isSpecial: true,
   },
 ];

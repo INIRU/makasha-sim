@@ -3,6 +3,7 @@ import {
   BALANCE,
   BURST_SOUND,
   CLICK_SOUNDS,
+  DANCING_IMAGE,
   ESTATE_BLUEPRINTS,
   FALL_IMAGES,
   UPGRADE_1_SOUND,
@@ -511,7 +512,7 @@ export default function App() {
           <div className="dance-button-wrap">
             <img
               className="click-target"
-              src="/resources/dancing.gif"
+              src={DANCING_IMAGE}
               alt="dancing"
               onClick={onMainClick}
               onDragStart={(event) => event.preventDefault()}
